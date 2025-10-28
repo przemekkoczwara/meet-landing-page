@@ -1,0 +1,63 @@
+@use 'variables' as v;
+@use 'base';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: v.$spacing-48;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: v.$spacing-64 v.$spacing-32 v.$spacing-32;
+  gap: v.$spacing-48;
+  overflow-x: hidden; //
+}
+.hero img {
+  width: 120vw;
+  margin-left: calc(-10vw - 50vw + 50%);
+}
+
+.hero__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: v.$spacing-24;
+}
+
+.title {
+  font-size: v.$size-lg;
+  padding: 0 v.$size-s;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$spacing-16;
+}
+
+.btn {
+  padding: v.$spacing-16 v.$spacing-40;
+  background-color: v.$cyan-600;
+  border-radius: 29px;
+  line-height: 1.5;
+  color: v.$white;
+}
+.btn span {
+  color: v.$cyan-300;
+  margin-left: 0.5rem;
+}
+
+.btn-purple {
+  background-color: v.$purple-600;
+}
