@@ -93,3 +93,64 @@
 .btn-purple {
   background-color: v.$purple-600;
 }
+// media queries desktop // hmm
+
+// main
+.main__wrapper {
+  padding: v.$spacing-64 v.$spacing-32;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: v.$spacing-64;
+  margin-top: 32px;
+}
+
+.circle {
+  width: v.$spacing-56; //56px;
+  height: v.$spacing-56; //56px;
+  border-radius: 50%;
+  color: v.$slate-600;
+  border: 1px solid v.$slate-300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.circle::before {
+  content: '';
+  height: 80px;
+  width: 1px;
+  background-color: v.$slate-300;
+  position: absolute;
+  bottom: 100%;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cards__item {
+  width: 145px;
+  height: auto;
+  border-radius: v.$spacing-8;
+}
+
+.main__details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .main__subtitle {
+    font-size: v.$size-s;
+    color: v.$cyan-600;
+    letter-spacing: 4px;
+  }
+
+  .main__title {
+    font-size: v.$size-m;
+    margin-top: v.$spacing-16;
+    margin-bottom: v.$spacing-32;
+  }
+}
