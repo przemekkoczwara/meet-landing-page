@@ -185,7 +185,6 @@
     padding-left: v.$spacing-80;
     padding-right: v.$spacing-80;
     padding-bottom: v.$spacing-72;
-    border: 1px solid red; // to delete
   }
 
   .cards {
@@ -210,5 +209,104 @@
   }
   .main__text {
     font-size: v.$size-sm;
+  }
+}
+
+// footer
+
+footer {
+  margin-top: v.$spacing-24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/src/assets/mobile/image-footer.jpg');
+  height: auto;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.footer__wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: v.$cyan-600;
+  opacity: 0.9;
+}
+.circle-footer {
+  position: relative;
+  margin-bottom: -28px;
+  z-index: 4;
+  background-color: white;
+}
+.footer__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: v.$spacing-64 v.$spacing-32;
+  gap: v.$spacing-24;
+  text-align: center;
+}
+
+.footer__title {
+  color: v.$white;
+  font-size: v.$size-m;
+  z-index: 1;
+}
+.footer__text {
+  color: v.$white;
+  z-index: 2;
+}
+
+.btn-footer {
+  z-index: 1;
+  background-color: v.$purple-600;
+}
+.btn-footer span {
+  color: v.$purple-300;
+}
+
+@media (min-width: 768px) {
+  .footer__wrapper {
+    background-image: url('/src/assets/tablet/image-footer.jpg');
+    width: 100vw;
+  }
+
+  .footer__title {
+    font-size: v.$size-md;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__wrapper {
+    background-image: url('/src/assets/desktop/image-footer.jpg');
+  }
+  .footer__details {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+    padding: v.$spacing-112 v.$spacing-80;
+    max-width: 1250px;
+    gap: v.$spacing-100;
+  }
+  .footer__title {
+    font-size: v.$size-lg;
+    width: 350px;
+  }
+  .footer__text {
+    font-size: v.$size-sm;
+    width: 350px;
   }
 }
