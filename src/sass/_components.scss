@@ -56,7 +56,7 @@
 
 @media (min-width: 768px) {
   .title {
-    font-size: v.$spacing-48;
+    font-size: v.$size-xl;
     padding: 0 v.$spacing-50;
   }
 }
@@ -96,14 +96,14 @@
 // media queries desktop // hmm
 
 // main
+
 .main__wrapper {
-  padding: v.$spacing-64 v.$spacing-32;
+  padding: v.$spacing-32 v.$spacing-32 v.$spacing-64;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: v.$spacing-64;
-  margin-top: 32px;
 }
 
 .circle {
@@ -116,6 +116,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: v.$spacing-32;
 }
 .circle::before {
   content: '';
@@ -129,7 +130,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: v.$spacing-16;
 }
 .cards__item {
   width: 145px;
@@ -141,16 +142,73 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+.main__subtitle {
+  font-size: v.$size-s;
+  color: v.$cyan-600;
+  letter-spacing: 4px;
+}
 
-  .main__subtitle {
-    font-size: v.$size-s;
-    color: v.$cyan-600;
-    letter-spacing: 4px;
+.main__title {
+  font-size: v.$size-m;
+  margin-top: v.$spacing-16;
+  margin-bottom: v.$spacing-32;
+}
+
+@media (min-width: 768px) {
+  .main__wrapper {
+    padding-top: v.$spacing-56;
   }
 
+  .circle {
+    margin-top: v.$spacing-56;
+  }
+  .cards {
+    gap: v.$spacing-24;
+  }
+  .cards__item {
+    width: 152px;
+    height: 160px;
+  }
+  .main__details {
+    max-width: 445px;
+  }
+  .main__subtitle {
+    font-size: v.$size-xs;
+  }
   .main__title {
-    font-size: v.$size-m;
-    margin-top: v.$spacing-16;
-    margin-bottom: v.$spacing-32;
+    font-size: v.$size-md;
+  }
+}
+@media (min-width: 1024px) {
+  .main__wrapper {
+    padding-left: v.$spacing-80;
+    padding-right: v.$spacing-80;
+    padding-bottom: v.$spacing-72;
+    border: 1px solid red; // to delete
+  }
+
+  .cards {
+    gap: v.$spacing-32;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .cards__item {
+    width: 256px;
+    height: 256px;
+  }
+  .main__details {
+    max-width: 540px;
+  }
+  .main__subtitle {
+    font-size: v.$size-base;
+  }
+  .main__title {
+    font-size: v.$size-lg;
+    padding: 0 v.$spacing-50;
+  }
+  .main__text {
+    font-size: v.$size-sm;
   }
 }
